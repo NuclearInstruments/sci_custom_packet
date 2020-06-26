@@ -1,0 +1,22 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FifoDemo", "FifoDemo_EXAMPLE.vcxproj", "{EF12BDD0-52DC-47D5-BE0A-6A8F7FF980EB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FifoDemo_LIB", "FifoDemo_LIB.vcxproj", "{F8336A46-C5E2-4191-BB72-8D4DD9DD73D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF12BDD0-52DC-47D5-BE0A-6A8F7FF980EB}.Release|x86.ActiveCfg = Release|Win32
+		{EF12BDD0-52DC-47D5-BE0A-6A8F7FF980EB}.Release|x86.Build.0 = Release|Win32
+		{F8336A46-C5E2-4191-BB72-8D4DD9DD73D3}.Release|x86.ActiveCfg = Release|Win32
+		{F8336A46-C5E2-4191-BB72-8D4DD9DD73D3}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
