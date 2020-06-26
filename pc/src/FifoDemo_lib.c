@@ -662,6 +662,8 @@ SCILIB int CPACK_CP_0_RECONSTRUCT_DATA(void *buffer_handle, t_FRAME_packet_colle
 		circular_buf_get(cbuf, &mpe);
 
 		if (in_sync == 0) {
+			//Check for header, if not wait 
+			//for an header
 			if (mpe != 0x80000000)
 			{
 				continue;
@@ -671,11 +673,15 @@ SCILIB int CPACK_CP_0_RECONSTRUCT_DATA(void *buffer_handle, t_FRAME_packet_colle
 			continue;
 		}
 		if (in_sync == 1) {
+			//Read timecode (first word)
 			decoded_packets->packets[k].Time_Code =  mpe;
 			in_sync = 2;
 			continue;
 		}
 		if (in_sync == 2) {
+			//Read packet data (analog + channel)
+			//if packet is broken and a new packet early
+			//begin, trash packet and decode the new one
 			if (mpe == 0x80000000) {
 				in_sync = 1;
 			    ch_index =0;
